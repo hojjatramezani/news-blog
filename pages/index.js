@@ -2,10 +2,13 @@ import Head from 'next/head';
 import Layout from '../components/Layout/layout';
 import { Box, Container, Divider, Grid, Typography, Drawer, Avatar, Button } from '@mui/material';
 import { makeStyles } from '@mui/styles';
+import Slides from './../components/Slides/slides';
+import Services from './../components/Services/services';
+import HomeArchive from '../components/HomeArchive/HomeArchive';
 
 const useStyls = makeStyles({
   slideGrid: {
-    marginBottom: '-4px',
+    // marginBottom: '-4px',
     padding: '1px',
   },
   subGrid: {
@@ -44,73 +47,14 @@ export default function Home() {
       <Layout>
 
         <Box sx={{ py: 2 }}>
-          <Container maxWidth={'xl'} >
-            <Grid container>
+          <Slides />
+          <Box py={9}>
+            <Services />
+          </Box>
 
-              <Grid className={classes.slideGrid} item xs={6} >
-                <div className={classes.subGrid}>
-                  <a href='#' className={classes.opa}>
-                    <Box p={1} pb={2}>
-                      <Typography variant='body2' sx={{ color: 'white' }}>Biden Issues Long-Awaited Executive Order on Crypto</Typography>
-                    </Box>
-                  </a>
-                  <img className={classes.imgSlide} src='images/slide1.jpg' />
-                </div>
-              </Grid>
-              <Grid className={classes.slideGrid} item xs={3} >
-                <div className={classes.subGrid}>
-                  <a href='#' className={classes.opa}>
-                    <Box p={1} pb={2}>
-                      <Typography variant='body2' sx={{ color: 'white' }}>Biden Issues Long-Awaited Executive Order on Crypto</Typography>
-                    </Box>
-                  </a>
-                  <img className={classes.imgSlide} src='images/slide1.jpg' />
-                </div>
-              </Grid>
-              <Grid className={classes.slideGrid} item xs={3} >
-                <div className={classes.subGrid}>
-                  <a href='#' className={classes.opa}>
-                    <Box p={1} pb={2}>
-                      <Typography variant='body2' sx={{ color: 'white' }}>Biden Issues Long-Awaited Executive Order on Crypto</Typography>
-                    </Box>
-                  </a>
-                  <img className={classes.imgSlide} src='images/slide1.jpg' />
-                </div>
-              </Grid>
-
-              <Grid className={classes.slideGrid} item xs={4} >
-                <div className={classes.subGrid}>
-                  <a href='#' className={classes.opa}>
-                    <Box p={1} pb={2}>
-                      <Typography variant='body2' sx={{ color: 'white' }}>Biden Issues Long-Awaited Executive Order on Crypto</Typography>
-                    </Box>
-                  </a>
-                  <img className={classes.imgSlide} src='images/slide1.jpg' />
-                </div>
-              </Grid>
-              <Grid className={classes.slideGrid} item xs={4} >
-                <div className={classes.subGrid}>
-                  <a href='#' className={classes.opa}>
-                    <Box p={1} pb={2}>
-                      <Typography variant='body2' sx={{ color: 'white' }}>Biden Issues Long-Awaited Executive Order on Crypto</Typography>
-                    </Box>
-                  </a>
-                  <img className={classes.imgSlide} src='images/slide1.jpg' />
-                </div>
-              </Grid>
-              <Grid className={classes.slideGrid} item xs={4} >
-                <div className={classes.subGrid}>
-                  <a href='#' className={classes.opa}>
-                    <Box p={1} pb={2}>
-                      <Typography variant='body2' sx={{ color: 'white' }}>Biden Issues Long-Awaited Executive Order on Crypto</Typography>
-                    </Box>
-                  </a>
-                  <img className={classes.imgSlide} src='images/slide1.jpg' />
-                </div>
-              </Grid>
-
-            </Grid>
-          </Container>
+          <Box py={9}>
+            <HomeArchive />
+          </Box>
         </Box>
 
       </Layout>
