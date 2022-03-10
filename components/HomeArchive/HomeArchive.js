@@ -1,8 +1,5 @@
 
 import { Box, Container, Divider, Grid, Typography } from '@mui/material';
-import ServicesMySql from '../Ui/Icons/ServicesMySql';
-import ServicesNextjs from '../Ui/Icons/ServicesNextjs';
-import ServicesPhp from '../Ui/Icons/ServicesPhp';
 import { teal } from '@mui/material/colors';
 
 export default function HomeArchive() {
