@@ -1,7 +1,7 @@
 
 import { Box, Container, Divider, Grid, Paper, Typography , Button } from '@mui/material';
 import { teal } from '@mui/material/colors';
-import HomePostItem from './../HomePostItem/HomePostItem';
+import HomePostItem from '../HomePostItem/HomePostItem';
 import MenuList from '@mui/material/MenuList';
 import MenuItem from '@mui/material/MenuItem';
 import ListItemText from '@mui/material/ListItemText';

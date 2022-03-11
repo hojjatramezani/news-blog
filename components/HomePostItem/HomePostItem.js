@@ -1,17 +1,19 @@
-
-import { Box, Container, Divider, Grid, Typography } from '@mui/material';
-import { teal } from '@mui/material/colors';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import { Button, CardActionArea, CardActions } from '@mui/material';
 
 export default function HomePostItem() {
 
   return (
     <>
-      <Card sx={{ maxWidth: 345 }}>
+      <Card sx={{ maxWidth: 245 , mx: 1 , mb: 2 }}>
         <CardActionArea>
           <CardMedia
             component="img"
             height="140"
-            image="/static/images/cards/contemplative-reptile.jpg"
+            image="images/slide1.jpg"
             alt="green iguana"
           />
           <CardContent>
@@ -26,7 +28,7 @@ export default function HomePostItem() {
         </CardActionArea>
         <CardActions>
           <Button size="small" color="primary">
-            Share
+            view
           </Button>
         </CardActions>
       </Card>

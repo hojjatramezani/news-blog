@@ -5,8 +5,11 @@ import { teal } from '@mui/material/colors';
 
 function Footer() {
     return (
-        <Box sx={{ py: 1 , borderBottom: 1 ,borderBottomColor: teal[500]}}>
-
+        <Box sx={{ py: 15 , bgcolor: teal[500]}} display={'flex'} flexDirection={"column"} alignItems={"center"}>
+                <Box p={2} sx={{borderRadius: 3 , backgroundColor: 'white' }}>
+                    <img width={80} src='images/logo.png' />
+                </Box>
+                <Typography variant="h5" color="text.primary" sx={{mt:2 , fontWeight: 'bold' , color: 'white'}}> News Blog </Typography>
         </Box>
     );
 }
