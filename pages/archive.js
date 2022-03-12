@@ -12,6 +12,9 @@ import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 import LocationCityIcon from '@mui/icons-material/LocationCity';
 import { teal } from '@mui/material/colors';
+import Pagination from '@mui/material/Pagination';
+import DateRangeIcon from '@mui/icons-material/DateRange';
+
 
 
 export default function Archive() {
@@ -29,7 +32,7 @@ export default function Archive() {
       <Layout>
 
         <Box sx={{ bgcolor: teal[500] }} display={"flex"} justifyContent={"center"}>
-            <img src='images/archive01.jpg' />
+          <img className={classes.imgBaner} src='images/archive01.jpg' />
         </Box>
 
         <Box sx={{ py: 2 }}>
@@ -74,25 +77,42 @@ export default function Archive() {
 
                 </Box>
               </Grid>
-              <Grid item xs={10} sx={{ paddingTop: '5px' }} >
-                <Box display={"flex"} justifyContent="flex-start" flexWrap={"wrap"}>
+              <Grid item xs={7} sx={{ px: 2 }}>
+                <Box>
                   {
                     arr.map((item) => {
                       return (
                         <div key={item}>
-                          <HomePostItem />
+                          <Paper sx={{ p: 1, mb: 2 }}>
+                            <Grid container>
+                              <Grid item xs="auto">
+                                <img width="150" height={"140"} className={classes.imgSlide} src="images/slide1.jpg" />
+                              </Grid>
+                              <Grid item xs sx={{ px: 2 }}>
+                                <Typography variant='h6' sx={{ mb: 2 }}>title</Typography>
+                                <Typography variant='body2'>About a month after Buzzfeed News revealed the identities of its founders, Yuga Labs has started requesting customers’ personal information for an unspecified new project.</Typography>
+                                <Box display={"flex"} justifyContent="right">
+                                  <Box pt={2} display={"flex"} justifyContent="right" alignItems={"center"}>
+                                        <DateRangeIcon />
+                                        <Typography variant='caption' sx={{px: 1, paddingTop: '3px' }}>1400-02-14 | 23:45</Typography>
+                                  </Box>
+                                </Box>
+                              </Grid>
+                            </Grid>
+                          </Paper>
                         </div>
                       );
                     })
                   }
+
+                  <Pagination count={10} variant="outlined" shape="rounded" />
                 </Box>
+              </Grid>
+              <Grid item xs={3}>
+                  <img className={classes.imgADS} src='images/ADS01.webp' />
               </Grid>
 
             </Grid>
-
-            <Box py={2} display="flex" justifyContent={"center"}>
-              <Button variant="outlined">view All Posts</Button>
-            </Box>
           </Container>
         </Box>
 
@@ -104,28 +124,10 @@ export default function Archive() {
 
 
 const useStyls = makeStyles({
-  slideGrid: {
-    // marginBottom: '-4px',
-    padding: '1px',
-  },
-  subGrid: {
-    position: 'relative',
-    height: '250px',
-  },
-  opa: {
-    position: 'absolute',
-    width: '100%',
-    height: '100%',
-    backgroundColor: '#00000099',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'end',
-    transition: 'all .4s ease',
-    '&:hover': { backgroundColor: '#000000b3', }
-  },
   imgSlide: {
-    width: '100%',
-    height: '250px',
-    objectFit: 'cover'
+    objectFit: 'cover',
+    borderRadius: '5px'
   },
+  imgADS:{width: '100%'},
+  imgBaner: {maxWidth: '100%'}
 });
