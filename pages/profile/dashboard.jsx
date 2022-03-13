@@ -2,9 +2,6 @@ import Head from 'next/head';
 import LayoutProfile from '../../Layout/LayoutProfile';
 
 
-
-
-
 export default function Dashboard() {
   return (
     <>
@@ -14,8 +11,7 @@ export default function Dashboard() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <LayoutProfile>
-
-          1111
+        Dashboard page
       </LayoutProfile>
 
     </>

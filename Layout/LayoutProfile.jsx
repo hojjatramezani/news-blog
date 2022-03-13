@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Container, Divider, Grid, Typography, Drawer, Avatar } from '@mui/material';
-import { grey , teal } from '@mui/material/colors';
+import { grey, teal } from '@mui/material/colors';
 import { makeStyles } from '@mui/styles';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import List from '@mui/material/List';
@@ -12,6 +12,7 @@ import DescriptionIcon from '@mui/icons-material/Description';
 import PlusOneIcon from '@mui/icons-material/PlusOne';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import SettingsIcon from '@mui/icons-material/Settings';
+import Link from 'next/link';
 
 
 
@@ -30,7 +31,7 @@ export default function LayoutProfile(props) {
 function HeaderProfile() {
     const classes = useStyls();
     return (
-        <Box sx={{ bgcolor: grey[800], borderTop: 5 , borderColor: teal[500] , color: 'white' }} className={classes.header}  >
+        <Box sx={{ bgcolor: grey[800], borderTop: 5, borderColor: teal[500], color: 'white' }} className={classes.header}  >
         </Box>
     );
 }
@@ -56,55 +57,59 @@ function SidebarProfile(props) {
         <Box py={1}>
 
             <ListItemButton sx={{ py: 1, paddingX: '10px', minHeight: 32, color: 'rgba(255,255,255,.8)' }}>
-                <ListItemIcon sx={{ m:0 , color: 'inherit' , minWidth: '35px' }}>
+                <ListItemIcon sx={{ m: 0, color: 'inherit', minWidth: '35px' }}>
                     <DashboardIcon />
                 </ListItemIcon>
-                <ListItemText
-                    primary= "Dashboard"
-                    primaryTypographyProps={{ fontSize: 14, fontWeight: 'medium' }}
-                />
+                <Link href="dashboard">
+                    <ListItemText
+                        primary="Dashboard"
+                        primaryTypographyProps={{ fontSize: 14, fontWeight: 'medium' }}
+                    />
+                </Link>
             </ListItemButton>
-            <Divider sx={{borderColor: '#ffffff8f'}} />
+            <Divider sx={{ borderColor: '#ffffff8f' }} />
 
             <ListItemButton sx={{ py: 1, paddingX: '10px', minHeight: 32, color: 'rgba(255,255,255,.8)' }}>
-                <ListItemIcon sx={{ m:0 , color: 'inherit' , minWidth: '35px' }}>
+                <ListItemIcon sx={{ m: 0, color: 'inherit', minWidth: '35px' }}>
                     <DescriptionIcon />
                 </ListItemIcon>
-                <ListItemText
-                    primary= "Posts"
-                    primaryTypographyProps={{ fontSize: 14, fontWeight: 'medium' }}
-                />
+                <Link href="news-list">
+                    <ListItemText
+                        primary="News List"
+                        primaryTypographyProps={{ fontSize: 14, fontWeight: 'medium' }}
+                    />
+                </Link>
             </ListItemButton>
-            <Divider sx={{borderColor: '#ffffff8f'}} />
+            <Divider sx={{ borderColor: '#ffffff8f' }} />
 
             <ListItemButton sx={{ py: 1, paddingX: '10px', minHeight: 32, color: 'rgba(255,255,255,.8)' }}>
-                <ListItemIcon sx={{ m:0 , color: 'inherit' , minWidth: '35px' }}>
+                <ListItemIcon sx={{ m: 0, color: 'inherit', minWidth: '35px' }}>
                     <PlusOneIcon />
                 </ListItemIcon>
                 <ListItemText
-                    primary= "Send Post"
+                    primary="Send News"
                     primaryTypographyProps={{ fontSize: 14, fontWeight: 'medium' }}
                 />
             </ListItemButton>
-            <Divider sx={{borderColor: '#ffffff8f'}} />
+            <Divider sx={{ borderColor: '#ffffff8f' }} />
 
             <ListItemButton sx={{ py: 1, paddingX: '10px', minHeight: 32, color: 'rgba(255,255,255,.8)' }}>
-                <ListItemIcon sx={{ m:0 , color: 'inherit' , minWidth: '35px' }}>
+                <ListItemIcon sx={{ m: 0, color: 'inherit', minWidth: '35px' }}>
                     <SettingsIcon />
                 </ListItemIcon>
                 <ListItemText
-                    primary= "Setting"
+                    primary="Setting"
                     primaryTypographyProps={{ fontSize: 14, fontWeight: 'medium' }}
                 />
             </ListItemButton>
-            <Divider sx={{borderColor: '#ffffff8f'}} />
+            <Divider sx={{ borderColor: '#ffffff8f' }} />
 
             <ListItemButton sx={{ py: 1, paddingX: '10px', minHeight: 32, color: 'rgba(255,255,255,.8)' }}>
-                <ListItemIcon sx={{ m:0 , color: 'inherit' , minWidth: '35px' }}>
+                <ListItemIcon sx={{ m: 0, color: 'inherit', minWidth: '35px' }}>
                     <ExitToAppIcon />
                 </ListItemIcon>
                 <ListItemText
-                    primary= "Exit"
+                    primary="Exit"
                     primaryTypographyProps={{ fontSize: 14, fontWeight: 'medium' }}
                 />
             </ListItemButton>

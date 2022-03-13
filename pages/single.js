@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Layout from '../components/Layout/layout';
+import Layout from '../Layout/Layout';
 import { Box, Container, Divider, Grid, Paper, Typography, Button } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import HomePostItem from '../components/HomePostItem/HomePostItem';
