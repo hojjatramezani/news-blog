@@ -1,37 +1,12 @@
 import Head from 'next/head';
-import Layout from '../components/Layout/layout';
+import Layout from '../Layout/layout';
 import { Box, Container, Divider, Grid, Typography, Drawer, Avatar, Button } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import Slides from './../components/Slides/slides';
 import Services from './../components/Services/services';
 import HomeArchive from '../components/HomeArchive/HomeArchive';
 
-const useStyls = makeStyles({
-  slideGrid: {
-    // marginBottom: '-4px',
-    padding: '1px',
-  },
-  subGrid: {
-    position: 'relative',
-    height: '250px',
-  },
-  opa: {
-    position: 'absolute',
-    width: '100%',
-    height: '100%',
-    backgroundColor: '#00000099',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'end',
-    transition: 'all .4s ease',
-    '&:hover': { backgroundColor: '#000000b3', }
-  },
-  imgSlide: {
-    width: '100%',
-    height: '250px',
-    objectFit: 'cover'
-  },
-});
+
 
 export default function Home() {
 
@@ -62,3 +37,30 @@ export default function Home() {
     </>
   );
 }
+
+const useStyls = makeStyles({
+  slideGrid: {
+    // marginBottom: '-4px',
+    padding: '1px',
+  },
+  subGrid: {
+    position: 'relative',
+    height: '250px',
+  },
+  opa: {
+    position: 'absolute',
+    width: '100%',
+    height: '100%',
+    backgroundColor: '#00000099',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'end',
+    transition: 'all .4s ease',
+    '&:hover': { backgroundColor: '#000000b3', }
+  },
+  imgSlide: {
+    width: '100%',
+    height: '250px',
+    objectFit: 'cover'
+  },
+});

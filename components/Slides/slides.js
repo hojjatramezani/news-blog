@@ -2,32 +2,7 @@
 import { Box, Container, Grid, Typography} from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
-const useStyls = makeStyles({
-  slideGrid: {
-    // marginBottom: '-4px',
-    padding: '1px',
-  },
-  subGrid: {
-    position: 'relative',
-    height: '250px',
-  },
-  opa: {
-    position: 'absolute',
-    width: '100%',
-    height: '100%',
-    backgroundColor: '#00000099',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'end',
-    transition: 'all .4s ease',
-    '&:hover': { backgroundColor: '#000000b3', }
-  },
-  imgSlide: {
-    width: '100%',
-    height: '250px',
-    objectFit: 'cover'
-  },
-});
+
 
 export default function Slides() {
 
@@ -35,7 +10,6 @@ export default function Slides() {
 
   return (
     <>
-
           <Container maxWidth={'xl'} >
             <Grid container>
 
@@ -106,3 +80,31 @@ export default function Slides() {
     </>
   );
 }
+
+
+const useStyls = makeStyles({
+  slideGrid: {
+    // marginBottom: '-4px',
+    padding: '1px',
+  },
+  subGrid: {
+    position: 'relative',
+    height: '250px',
+  },
+  opa: {
+    position: 'absolute',
+    width: '100%',
+    height: '100%',
+    backgroundColor: '#00000099',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'end',
+    transition: 'all .4s ease',
+    '&:hover': { backgroundColor: '#000000b3', }
+  },
+  imgSlide: {
+    width: '100%',
+    height: '250px',
+    objectFit: 'cover'
+  },
+});
