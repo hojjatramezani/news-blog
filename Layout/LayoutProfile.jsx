@@ -86,10 +86,12 @@ function SidebarProfile(props) {
                 <ListItemIcon sx={{ m: 0, color: 'inherit', minWidth: '35px' }}>
                     <PlusOneIcon />
                 </ListItemIcon>
-                <ListItemText
-                    primary="Send News"
-                    primaryTypographyProps={{ fontSize: 14, fontWeight: 'medium' }}
-                />
+                <Link href="send-news">
+                    <ListItemText
+                        primary="Send News"
+                        primaryTypographyProps={{ fontSize: 14, fontWeight: 'medium' }}
+                    />
+                </Link>
             </ListItemButton>
             <Divider sx={{ borderColor: '#ffffff8f' }} />
 
