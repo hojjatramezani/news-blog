@@ -12,7 +12,7 @@ import AddCircleIcon from '@mui/icons-material/AddCircle';
 
 function Account() {
     return (
-        <Paper elevation={1} sx={{ p: 2, height: '100%' }}>
+        <Paper elevation={1} sx={{ p: 2, pb: 8 ,position: 'relative' , height: '100%' }}>
             <Box display={'flex'} justifyContent="center" sx={{ mb: 3 }}>
                 <FaceIcon fontSize='large' />
             </Box>
@@ -52,7 +52,9 @@ function Account() {
                     </Avatar>
                 </Badge>
             </Box>
-            <Button variant="contained">Edit</Button>
+            <Box sx={{p: 1 , position: 'absolute' , width: '100%' , bottom: '0px' , left: '0px'}}>
+                <Button variant="contained">Edit</Button>
+            </Box>
         </Paper>
     );
 }

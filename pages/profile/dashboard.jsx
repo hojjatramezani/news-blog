@@ -1,5 +1,10 @@
 import Head from 'next/head';
+import ChartCategorise from '../../components/profile/dashboard/ChartCategorise';
 import LayoutProfile from '../../Layout/LayoutProfile';
+import { Box, Container , Grid , Typography } from '@mui/material';
+import ViewsStatistics from '../../components/profile/dashboard/ViewsStatistics';
+import AuthorsStatistics from '../../components/profile/dashboard/AuthorsStatistics';
+
 
 
 export default function Dashboard() {
@@ -11,7 +16,26 @@ export default function Dashboard() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <LayoutProfile>
-        Dashboard page
+        <Container maxWidth={'lg'} sx={{pb: 15}}>
+            <Box sx={{ py: 8 }} display={'flex'} flexDirection={"column"} alignItems={"center"}>
+                  <Box p={2} sx={{borderRadius: 3 , backgroundColor: 'white' }}>
+                      <img width={80} src='/images/logo.png' />
+                  </Box>
+                  <Typography variant="h5" color="text.primary" sx={{ fontWeight: 'bold'}}> News Blog </Typography>
+            </Box>
+          <Grid container>
+            <Grid item xs={4} p={2}>
+              <ChartCategorise />
+            </Grid>
+            <Grid item xs={4} p={2}>
+              <ViewsStatistics />
+            </Grid>
+            <Grid item xs={4} p={2}>
+              <AuthorsStatistics />
+            </Grid>
+          </Grid>
+
+        </Container>
       </LayoutProfile>
 
     </>

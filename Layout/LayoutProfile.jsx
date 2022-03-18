@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Container, Divider, Grid, Typography, Drawer, Avatar } from '@mui/material';
+import { Box, Container, Divider, Grid, Typography, Avatar , Drawer } from '@mui/material';
 import { grey, teal } from '@mui/material/colors';
 import { makeStyles } from '@mui/styles';
 import DashboardIcon from '@mui/icons-material/Dashboard';
@@ -13,6 +13,7 @@ import PlusOneIcon from '@mui/icons-material/PlusOne';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import SettingsIcon from '@mui/icons-material/Settings';
 import Link from 'next/link';
+import { deepOrange } from '@mui/material/colors';
 
 
 
@@ -31,7 +32,14 @@ export default function LayoutProfile(props) {
 function HeaderProfile() {
     const classes = useStyls();
     return (
-        <Box sx={{ bgcolor: grey[800], borderTop: 5, borderColor: teal[500], color: 'white' }} className={classes.header}  >
+        <Box sx={{ bgcolor: grey[800], borderTop: 5, borderColor: teal[500], color: 'white' }} className={classes.header} display={"flex"} justifyContent={"right"} >
+            <Avatar
+                      sx={{ bgcolor: deepOrange[500] ,cursor: 'pointer' }}
+                      alt="Remy Sharp"
+                      src="/broken-image.jpg"
+                  >
+                      B
+                  </Avatar>
         </Box>
     );
 }
@@ -125,7 +133,7 @@ function SidebarProfile(props) {
 
 const useStyls = makeStyles({
     header: {
-        height: '40px'
+        padding: '5px 10px'
     },
     content: {
         display: 'flex',

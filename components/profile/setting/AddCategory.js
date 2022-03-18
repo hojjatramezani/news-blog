@@ -4,12 +4,13 @@ import { teal } from '@mui/material/colors';
 import { makeStyles } from '@mui/styles';
 import Paper from '@mui/material/Paper';
 import AddTaskIcon from '@mui/icons-material/AddTask';
+import { blue } from '@mui/material/colors';
 
 
 function AddCategory() {
     const classes = useStyls();
     return (
-        <Paper elevation={1} sx={{ p: 2 , height: '100%' }}>
+        <Paper elevation={1} sx={{ p: 2, pb: 8 ,position: 'relative' , height: '100%' }}>
             <Box display={'flex'} justifyContent="center" sx={{ mb: 3 }}>
                 <AddTaskIcon fontSize='large' />
             </Box>
@@ -23,8 +24,11 @@ function AddCategory() {
                 fullWidth
                 sx={{ mb: 2 }}
             />
+            <Typography fontSize={"small"} sx={{color: blue[500] , cursor: 'pointer' , mb: 2 }}>Show all categories</Typography>
            
-            <Button variant="contained">Add</Button>
+            <Box sx={{p: 1 , position: 'absolute' , width: '100%' , bottom: '0px' , left: '0px'}}>
+                <Button variant="contained">Add</Button>
+            </Box>
         </Paper>
     );
 }
